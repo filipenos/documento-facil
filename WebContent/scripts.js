@@ -14,13 +14,14 @@ function gerar() {
 
 function validar() {
 
-	var entrada = document.getElementById("saida");
-	var saida = document.getElementById("resultado");
-	saida.value = 'teste';
-	if (entrada.value.length == 11) {
-		alert('valor ' + validarCPF(entrada.value));
-	} else {
-		alert('valor ' + validarCNPJ(entrada.value));
+	var entrada = document.getElementById("saida").value;
+	var resultado = document.getElementById("resultado");
+	entrada = entrada.replace(/[^\d]+/g, '');
+	if (entrada.length == 11) {
+		resultado.innerHTML = 'CPF ' + validarCPF(entrada);
+	}
+	if (entrada.length == 14) {
+		resultado.innerHTML = 'CNPJ ' + validarCNPJ(entrada);
 	}
 
 }
