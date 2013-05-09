@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta charset="utf-8">
+<!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script> -->
+<script src="/scripts.js" type="text/javascript"></script>
+<style>
+h1 {
+	color: #C0C0C0;
+}
+</style>
+</head>
+<body>
+	<form id="form1" name="form1" method="post" action="">
+		<div align="center">
+			<div align="center">
+				<input name="saida" type="text" class="saida" id="saida">
+			</div>
+			<div align="center">
+				<input name="tipo" type="radio" value="cnpj" id="cnpj" checked>CNPJ
+				<input name="tipo" type="radio" value="cpf" id="cpf">CPF <input
+					type="checkbox" id="pontuacao">Pontuação
+			</div>
+			<div align="center">
+				<input type="button" value="Gerar" onclick="gerar();"> <input
+					type="button" value="Validar" onclick="validar();">
+			</div>
+			<div align="center">
+				<label id="resultado"></label>
+			</div>
+		</div>
+	</form>
+</body>
+</html>
